@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Resources related to the data sources -->
+    <string-array name="feed_names">
+        <item>Julian</item>
+        <item>Santa Ysabel</item>
+        <item>Ramona</item>
+        <item>Lakeside</item>
+        <item>Santee</item>
+        <item>Alpine</item>
+        <item>Descanso</item>
+    </string-array>
+
+    <string-array name="feed_values">
+        <item>Julian</item>
+        <item>Santa Ysabel</item>
+        <item>Ramona</item>
+        <item>Lakeside</item>
+        <item>Santee</item>
+        <item>Alpine</item>
+        <item>Descanso</item>
+    </string-array>
+
+    <string-array name="feed_defaults">
+        <item>Julian</item>
+        <item>Santa Ysabel</item>
+        <item>Ramona</item>
+        <item>Lakeside</item>
+        <item>Santee</item>
+        <item>Alpine</item>
+        <item>Descanso</item>
+    </string-array>
+</resources>

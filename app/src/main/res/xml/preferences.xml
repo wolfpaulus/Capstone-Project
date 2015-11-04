@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Hwy67 Notification Preferences">
+    <PreferenceCategory
+        android:summary="Select from avail. communities"
+        android:title="Coverage Area">
+        <MultiSelectListPreference
+            android:defaultValue="@array/feed_defaults"
+            android:dialogTitle="Communities"
+            android:entries="@array/feed_names"
+            android:entryValues="@array/feed_values"
+            android:key="@string/preference_key_sources"
+            android:summary="Receive Notifications for selected communities"
+            android:title="Select your Communities" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="Don't show notifications"
+        android:title="Quiet Period">
+        <SwitchPreference
+            android:key="@string/preference_key_ts"
+            android:summary=""
+            android:title="Enable Quiet Period" />
+        <com.techcasita.android.hwy67.TimePreference
+            android:dependency="@string/preference_key_ts"
+            android:key="@string/preference_key_t0"
+            android:summary="Set a time for the quiet period to start"
+            android:title="Quiet Period Start" />
+        <com.techcasita.android.hwy67.TimePreference
+            android:dependency="@string/preference_key_ts"
+            android:key="@string/preference_key_t1"
+            android:summary="Set a time for the quiet period to end"
+            android:title="Quiet Period End" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="Request a test notification"
+        android:title="Test Notification">
+        <Preference
+            android:key="@string/preference_key_demo"
+            android:summary="Request a test notification"
+            android:title="Test" />
+    </PreferenceCategory>
+</PreferenceScreen>

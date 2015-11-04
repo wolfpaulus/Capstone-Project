@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_home"
+        android:checkableBehavior="single">
+    <item
+        android:checked="true"
+        android:id="@+id/nav_frontpage"
+        android:icon="@drawable/ic_action_action_home"
+        android:title="Front Page" />
+    </group>
+    <group
+        android:id="@+id/group_communities"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_julian"
+            android:icon="@drawable/ic_action_maps_terrain"
+            android:title="Julian" />
+        <item
+            android:id="@+id/nav_ysabel"
+            android:icon="@drawable/ic_action_maps_terrain"
+            android:title="Santa Ysabel" />
+        <item
+            android:id="@+id/nav_ramona"
+            android:icon="@drawable/ic_action_maps_store_mall_directory"
+            android:title="Ramona" />
+        <item
+            android:id="@+id/nav_lakeside"
+            android:icon="@drawable/ic_action_social_location_city"
+            android:title="Lakeside" />
+        <item
+            android:id="@+id/nav_santee"
+            android:icon="@drawable/ic_action_social_location_city"
+            android:title="Santee" />
+        <item
+            android:id="@+id/nav_alpine"
+            android:icon="@drawable/ic_action_maps_store_mall_directory"
+            android:title="Alpine" />
+        <item
+            android:id="@+id/nav_descanso"
+            android:icon="@drawable/ic_action_maps_terrain"
+            android:title="Descanso" />
+    </group>
+    <group
+        android:id="@+id/group_feature"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_action_action_settings"
+            android:title="Settings" />
+    </group>
+</menu>
