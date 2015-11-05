@@ -35,9 +35,29 @@
     <dimen name="detail_inner_horiz_margin">16dp</dimen>
     <dimen name="detail_card_max_width">10000dp</dimen>
 
-    <!-- force match_parent -->
+    <!-- List Item and Search Item View -->
     <dimen name="detail_metabar_vert_padding">16dp</dimen>
     <dimen name="detail_metabar_title_bottom_padding">4dp</dimen>
     <dimen name="detail_body_top_margin">16dp</dimen>
     <dimen name="detail_body_bottom_margin">88dp</dimen>
+    <dimen name="li_paddingEnd">6dip</dimen>
+    <dimen name="li_paddingLeft">0dip</dimen>
+    <dimen name="li_paddingRight">6dip</dimen>
+    <dimen name="li_paddingStart">0dip</dimen>
+    <dimen name="li_paddingTop">6dip</dimen>
+    <dimen name="li_image_width">80dp</dimen>
+    <dimen name="li_image_height">80dp</dimen>
+    <dimen name="li_title_paddingBottom">4dp</dimen>
+    <dimen name="li_title_paddingLeft">16dp</dimen>
+    <dimen name="li_title_paddingRight">16dp</dimen>
+    <dimen name="li_title_paddingTop">6dp</dimen>
+    <dimen name="li_text_paddingBottom">16dp</dimen>
+    <dimen name="li_text_paddingLeft">16dp</dimen>
+    <dimen name="li_text_paddingRight">16dp</dimen>
+    <dimen name="li_div_height">1dp</dimen>
+    <dimen name="li_div_marginBottom">0dp</dimen>
+    <dimen name="li_div_marginTop">0dp</dimen>
+    <dimen name="si_text_paddingLeft">0dp</dimen>
+    <dimen name="si_text_paddingStart">0dp</dimen>
+
 </resources>

@@ -11,16 +11,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingEnd="6dip"
-        android:paddingLeft="0dip"
-        android:paddingRight="6dip"
-        android:paddingStart="0dip"
-        android:paddingTop="6dip">
+        android:paddingEnd="@dimen/li_paddingEnd"
+        android:paddingLeft="@dimen/li_paddingLeft"
+        android:paddingRight="@dimen/li_paddingRight"
+        android:paddingStart="@dimen/li_paddingStart"
+        android:paddingTop="@dimen/li_paddingTop">
 
         <ImageView
             android:id="@+id/thumbnail"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/li_image_width"
+            android:layout_height="@dimen/li_image_height"
             android:layout_alignParentTop="true"
             android:contentDescription="@string/cd_headline_photo"
             android:scaleType="centerCrop" />
@@ -37,13 +37,14 @@
             android:layout_toEndOf="@id/thumbnail"
             android:layout_toRightOf="@id/thumbnail"
             android:ellipsize="end"
-
             android:gravity="center_vertical"
             android:maxLines="2"
-            android:paddingBottom="4dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="6dp"
+            android:paddingBottom="@dimen/li_title_paddingBottom"
+            android:paddingLeft="@dimen/li_title_paddingLeft"
+            android:paddingStart="@dimen/li_title_paddingLeft"
+            android:paddingEnd="@dimen/li_title_paddingRight"
+            android:paddingRight="@dimen/li_title_paddingRight"
+            android:paddingTop="@dimen/li_title_paddingTop"
             android:textColor="@color/colorPrimaryText" />
 
         <TextView
@@ -74,20 +75,20 @@
         android:ellipsize="end"
         android:maxLines="5"
         android:minLines="3"
-        android:paddingBottom="16dp"
-        android:paddingEnd="16dp"
-        android:paddingLeft="0dip"
-        android:paddingRight="16dp"
-        android:paddingStart="0dip"
+        android:paddingBottom="@dimen/li_text_paddingBottom"
+        android:paddingLeft="@dimen/si_text_paddingLeft"
+        android:paddingStart="@dimen/si_text_paddingStart"
+        android:paddingRight="@dimen/li_text_paddingRight"
+        android:paddingEnd="@dimen/li_text_paddingRight"
         android:singleLine="false"
         android:textColor="@color/colorSecondaryText" />
 
     <!-- Divider -->
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_height="@dimen/li_div_height"
+        android:layout_marginBottom="@dimen/li_div_marginBottom"
+        android:layout_marginTop="@dimen/li_div_marginTop"
         android:background="@color/colorDivider"
         android:contentDescription="@string/cd_divider" />
 </LinearLayout>
