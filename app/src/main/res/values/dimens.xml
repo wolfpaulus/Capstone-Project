@@ -60,4 +60,13 @@
     <dimen name="si_text_paddingLeft">0dp</dimen>
     <dimen name="si_text_paddingStart">0dp</dimen>
 
+    <!-- Widget -->
+    <dimen name="widgetMinHeight">130dip</dimen>
+    <dimen name="widgetMinWidth">250dip</dimen>
+    <dimen name="stringStoryTitle">17sp</dimen>
+    <dimen name="widgetText">15sp</dimen>
+    <dimen name="widgetListTop">5dp</dimen>
+    <dimen name="widgetStoryTitle">11sp</dimen>
+    <dimen name="widgetStoryImageSize">50dp</dimen>
+
 </resources>

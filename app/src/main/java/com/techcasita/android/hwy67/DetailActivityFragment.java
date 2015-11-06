@@ -6,10 +6,7 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -59,25 +56,6 @@ public class DetailActivityFragment extends Fragment implements
         final DetailActivityFragment fragment = new DetailActivityFragment();
         fragment.setArguments(arguments);
         return fragment;
-    }
-
-    public static Bitmap drawableToBitmap(final Drawable drawable) {
-        if (drawable instanceof BitmapDrawable) {
-            final BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
-            if (bitmapDrawable.getBitmap() != null) {
-                return bitmapDrawable.getBitmap();
-            }
-        }
-        final Bitmap bitmap;
-        if (drawable.getIntrinsicWidth() <= 0 || drawable.getIntrinsicHeight() <= 0) {
-            bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888); // Single color bitmap will be created of 1x1 pixel
-        } else {
-            bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        }
-        final Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-        drawable.draw(canvas);
-        return bitmap;
     }
 
     @Override
@@ -186,7 +164,7 @@ public class DetailActivityFragment extends Fragment implements
 
                                 @Override
                                 public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                                    final Bitmap bitmap = drawableToBitmap(resource.getCurrent());
+                                    final Bitmap bitmap = Util.drawableToBitmap(resource.getCurrent());
                                     final Palette p = new Palette.Builder(bitmap).generate();
                                     final int col = p.getVibrantColor(0xFF333333);
                                     mRootView.findViewById(R.id.meta_bar).setBackgroundColor(col);

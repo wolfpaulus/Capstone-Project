@@ -1,8 +1,15 @@
 package com.techcasita.android.hwy67.content;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import com.techcasita.android.hwy67.remote.Story;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.techcasita.android.hwy67.content.StoriesProvider.Tables;
 
@@ -10,11 +17,37 @@ import static com.techcasita.android.hwy67.content.StoriesProvider.Tables;
  * StoriesDB, SQL for creating/upda. the table definition.
  */
 public class StoriesDB extends SQLiteOpenHelper {
+    private static final String LOG_TAG = StoriesDB.class.getName();
     private static final String DATABASE_NAME = "hwy67.db";
     private static final int DATABASE_VERSION = 4;
 
     public StoriesDB(final Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+    public static List<Story> getAllStories(final Context context) {
+        final List<Story> storyList = new ArrayList<>();
+        final SQLiteDatabase database = context.openOrCreateDatabase(DATABASE_NAME, Context.MODE_PRIVATE, null);
+        if (database == null) {
+            Log.d(LOG_TAG, "getAllStories() database is null");
+            return storyList;
+        }
+        final Cursor cursor = database.query(Tables.ITEMS, null, null, null, null, null, "sid DESC", "5");
+        if (cursor == null) {
+            Log.d(LOG_TAG, "getAllStories() queryResultcursor is null");
+            return storyList;
+        }
+        if (cursor.moveToFirst()) {
+            do {
+                final String title = cursor.getString(StoryLoader.Query.TITLE);
+                final String date = cursor.getString(StoryLoader.Query.DATE);
+                final String author = cursor.getString(StoryLoader.Query.AUTHOR);
+                final String img_url = cursor.getString(StoryLoader.Query.IMAGE_URL);
+                storyList.add(new Story(title, date, author, img_url));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return storyList;
     }
 
     @Override

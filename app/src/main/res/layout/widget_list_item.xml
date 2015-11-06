@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorLight"
+    android:elevation="4dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/li_paddingEnd"
+        android:paddingLeft="@dimen/li_paddingLeft"
+        android:paddingRight="@dimen/li_paddingRight"
+        android:paddingStart="@dimen/li_paddingStart"
+        android:paddingTop="@dimen/widgetListTop">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="@dimen/li_image_width"
+            android:layout_height="@dimen/li_image_height"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/cd_headline_photo"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/article_title"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toEndOf="@id/thumbnail"
+            android:layout_toRightOf="@id/thumbnail"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:paddingBottom="@dimen/li_title_paddingBottom"
+            android:paddingEnd="@dimen/li_title_paddingRight"
+            android:paddingLeft="@dimen/li_title_paddingLeft"
+            android:paddingRight="@dimen/li_title_paddingRight"
+            android:paddingStart="@dimen/li_title_paddingLeft"
+            android:paddingTop="@dimen/li_title_paddingTop"
+            android:textColor="@color/colorPrimaryText" />
+
+        <TextView
+            android:id="@+id/article_subtitle"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/article_title"
+            android:layout_toEndOf="@id/thumbnail"
+            android:layout_toRightOf="@id/thumbnail"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/li_text_paddingBottom"
+            android:paddingEnd="@dimen/li_text_paddingRight"
+            android:paddingLeft="@dimen/li_text_paddingLeft"
+            android:paddingRight="@dimen/li_text_paddingRight"
+            android:paddingStart="@dimen/li_text_paddingLeft"
+            android:singleLine="true"
+            android:textColor="@color/colorSecondaryText" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/details_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+

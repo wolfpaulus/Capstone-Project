@@ -22,6 +22,18 @@ public class Story {
     private String url;
     private String foreign_url;
 
+    public Story() {
+    }
+
+    public Story(final String title,
+                 final String date,
+                 final String author,
+                 final String image_url) {
+        this.title = title;
+        this.date = date;
+        this.author = author;
+        this.image_url = image_url;
+    }
 
     public int getID() {
         return sid;
